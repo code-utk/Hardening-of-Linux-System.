@@ -1,0 +1,14 @@
+# Commands to run !
+
+==> ansible-galaxy install git+https://github.com/openstack/ansible-hardening
+
+==> vim playbook.yml
+---
+
+- hosts: localhost
+  become: yes
+  roles:
+       -ansible-hardening
+
+
+==> ansible-playbook -C -i hosts playbook.yml
